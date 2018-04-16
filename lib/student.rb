@@ -7,17 +7,17 @@ class Student
   def initialize(id: nil, name:, grade:)
   end
 
-  def self.create_table 
-  end 
+  def self.create_table
+  end
 
   def self.drop_table
-  end 
+  end
 
   def self.create 
   end
 
-  def self.save 
+  def self.save
   end
 
-  
+
 end
