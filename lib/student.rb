@@ -24,7 +24,7 @@ class Student
   def self.create
   end
 
-  def self.save(name, grade)
+  def self.save
     DB[:conn].execute("INSERT INTO students (name, grade) VALUES (?, ?)", name, grade)
   end
 
