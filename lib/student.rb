@@ -19,7 +19,7 @@ class Student
     DB[:conn].execute("DROP TABLE students;")
   end
 
-  def self.create(id: nil, name:, grade:)
+  def self.create(id: nil, name, grade)
     student = Student.new(name, grade)
     student.save
     student
