@@ -3,8 +3,6 @@ class Student
   attr_reader :id
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
-  def initialize(id = nil, name, grade)
-  end
 
   def self.create_table
     sql =  <<-SQL
@@ -21,7 +19,7 @@ class Student
     DB[:conn].execute("DROP TABLE students;")
   end
 
-  def self.create(name:, grade:)
+  def self.create(id: nil, name:, grade:)
     student = Student.new(name, grade)
     student.save
     student
